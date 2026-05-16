@@ -19,7 +19,7 @@ const AddRoutes = () => {
   }
 
   let add=async()=>{
-    await axios.post("http://localhost:7780/db",busdata);
+    await axios.post("https://bus-finder-backend.onrender.com/db",busdata);
   }
 
   let nav = useNavigate();
