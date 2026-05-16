@@ -1,0 +1,309 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: ProductSans;
+}
+@font-face {
+    font-family: ProductSans;
+    src: url(../src/assets/fonts/Product\ Sans\ Regular.ttf);
+}
+@media only screen and (orientation: landscape){
+#main_con{
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(to bottom right,rgba(135, 207, 235, 0.768),rgba(135, 207, 235, 0.664));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+#buses_con{
+    width: 95vw;
+    height: 95vh;
+    background-color: rgba(255, 255, 255, 0.605);
+    border-radius: 2vw;
+    animation: toanimate 700ms ease-in-out 1;
+}
+@keyframes toanimate {
+    from{
+        transform: translateY(30px);
+        opacity: 0;
+    } to{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+#nav{
+    width: 100%;
+    height: 10%;
+    background-color: rgba(255, 255, 255, 0.321);
+    display: flex;   
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 2vw 2vw 0vw 0vw;
+}
+#first{
+    width: 20vw;
+    height: 100%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1vw;
+}
+#second{
+    width: 40vw;
+    height: 100%;
+    /* background-color: green; */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.bus_icon{
+    font-size: 3vw;
+    color: blue;
+}
+#finder_heading{
+    color: blue;
+}
+.links{
+    text-decoration: none;
+    color: blue;
+}
+.links:hover{
+    text-decoration: underline;
+}
+#down_div{
+    width: 100%;
+    height: 90%;
+    background-image: url(../src/assets/bus1.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: right;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.inside_divs{
+    width: 45vw;
+    height: 100%;
+    /* background-color: yellow; */
+}
+#inputs_con{
+    width: 35vw;
+    height: 20vw;
+    background-color: rgba(255, 255, 255, 0.333);
+    border-radius: 1vw;
+    box-shadow: 0px 0px 3px rgba(128, 128, 128, 0.716);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5vw;
+    transition: 0.5s;
+}
+#sample{
+    color: black;
+}
+#left_div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+#normal_headings{
+    width: 100%;
+    height: 30vh;
+    /* background-color: brown; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1vw;
+    padding-left: 3vw;
+}
+#again_h1{
+    color: blue;
+}
+span{
+    color: gray;
+}
+.inputs{
+    outline: none;
+    font-size: 1.5vw;
+    border: 1px solid gray;
+    border-radius: 0.5vw;
+    padding: 0.5vw;
+    background-color: rgba(255, 255, 255, 0.489);
+}
+.inputs::placeholder{
+    color: black;
+}
+#btn{
+    outline: none;
+    border: none;
+    width: 20vw;
+    height: 4vh;
+    background-color: blue;
+    color: white;
+    border-radius: 0.5vw;
+    cursor: pointer;
+    transition: 0.5s;
+}
+#btn:active{
+    transform: scale(0.9);
+}
+#details_con{
+    width: 80%;
+    height: 90%;
+    background-color: rgba(255, 255, 255, 0.618);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 2vw;
+}
+#right_div{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    /* background-color: red; */
+    align-items: center;
+    justify-content: center;
+}
+#error{
+    width: 80%;
+    height: 90%;
+    background-color: rgba(255, 255, 255, 0.618);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2vw;
+}
+.details{
+    color: blue;
+}
+#stops_div{
+    width: 100%;
+    height: 30%;
+    /* background-color: green; */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+#each_stop{
+    width: 80%;
+    height: 100%;
+    /* background-color: yellow; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+#main_route_con{
+    width: 99vw;
+    height: 800vh;
+    background-image: linear-gradient(90deg, #3F2B96 0%, #A8C0FF 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;  
+}
+#btn_r{
+    outline: none;
+    border: 2px solid white;
+    font-size: 1.5vw;
+    padding: 0.5vw;
+    border-radius: 0.8vw;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    transition: 0.5s;
+}
+#btn_r:active{
+    transform: scale(0.8);
+}
+#main_routes_con{
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(to bottom right,#003973,#E5E5BE);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+#form_div{
+    width: 40vw;
+    height: 90vh;
+    background-color: rgba(245, 245, 245, 0.401);
+    border-radius: 5vw 1vw 5vw 1vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+#stops_div{
+    width: 90%;
+    height: 30%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.inputs_add{
+    outline: none;
+    border: none;
+    font-size: 1.3vw;
+    background-color: transparent;
+    border-bottom: 2px solid white;
+    color: white;
+    padding-left: 0.5vw;
+}
+.inputs_add::placeholder{
+    color: white;
+}
+.stops_in{
+    outline: none;
+    border: none;
+    font-size: 0.9vw;
+    color: white;
+    background-color: transparent;
+    border-bottom: 1px solid white;
+    padding-left: 0.5vw;
+}
+.stops_in::placeholder{
+    color: white;
+}
+#btn_add{
+    outline: none;
+    border: none;
+    font-size: 1vw;
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    padding: 0.2vw;
+    border-radius: 0.5vw;
+    cursor: pointer;
+    transition: 0.5s;
+}
+#btn_add:active{
+    transform: scale(0.9);
+}
+#home_btn{
+    outline: none;
+    border: none;
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    font-size: 1vw;
+    padding: 0.2vw;
+    border-radius: 0.3vw;
+    cursor: pointer;
+    transition: 0.5s;
+}
+#home_btn:active{
+    transform: scale(0.9);
+}
+}
