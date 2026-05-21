@@ -308,8 +308,8 @@ span{
 }
 }
 /* ================================================
-   MOBILE STYLES — Bus Finder App
-   All screens up to 768px
+   MOBILE STYLES — Bus Finder App (ALL PAGES)
+   Screens up to 768px
    ================================================ */
 
 @media screen and (max-width: 768px) {
@@ -318,7 +318,9 @@ span{
         box-sizing: border-box;
     }
 
-    /* ---- PAGE 1: HOME ---- */
+    /* ================================================
+       PAGE 1 — HOME
+       ================================================ */
 
     #main_con {
         width: 100vw;
@@ -334,7 +336,7 @@ span{
         width: 100vw;
         min-height: 100vh;
         height: auto;
-        background-color: rgba(255, 255, 255, 0.1);
+        background-color: rgba(255,255,255,0.1);
         border-radius: 0;
     }
 
@@ -347,7 +349,7 @@ span{
         align-items: flex-start;
         justify-content: flex-start;
         border-radius: 0;
-        background: rgba(255, 255, 255, 0.15);
+        background: rgba(255,255,255,0.15);
         border-bottom: 1px solid rgba(255,255,255,0.25);
         gap: 12px;
     }
@@ -383,11 +385,6 @@ span{
         color: rgba(255,255,255,0.8);
     }
 
-    .links h2 {
-        font-size: 13px;
-        margin: 0;
-    }
-
     .links {
         font-size: 13px;
         color: white;
@@ -396,6 +393,11 @@ span{
         border-radius: 20px;
         border: 1px solid rgba(255,255,255,0.3);
         text-decoration: none;
+    }
+
+    .links h2 {
+        font-size: 13px;
+        margin: 0;
     }
 
     /* --- Main Content --- */
@@ -517,10 +519,9 @@ span{
 
     #btn:active {
         transform: scale(0.97);
-        box-shadow: 0 2px 8px rgba(37,99,176,0.25);
     }
 
-    /* --- Results / Right Side --- */
+    /* --- Results --- */
     #right_div {
         width: 100%;
         height: auto;
@@ -597,7 +598,6 @@ span{
         background: rgba(255,255,255,0.95);
         border-radius: 18px;
         box-shadow: 0 8px 28px rgba(37,99,176,0.15);
-        font-size: 16px;
         text-align: center;
         justify-content: center;
     }
@@ -608,7 +608,7 @@ span{
     }
 
     /* ================================================
-       PAGE 2: ADD ROUTES
+       PAGE 2 — ADD ROUTES
        ================================================ */
 
     #main_routes_con {
@@ -624,9 +624,9 @@ span{
     }
 
     #main_routes_con > h2 {
-        font-size: 16px !important;
+        font-size: 14px !important;
         color: white !important;
-        font-weight: 600;
+        font-weight: 700;
         text-align: center;
         letter-spacing: 0.5px;
         margin: 0;
@@ -649,7 +649,6 @@ span{
         gap: 12px;
     }
 
-    /* --- All main inputs inside form --- */
     .inputs_add {
         width: 100%;
         font-size: 13px;
@@ -658,7 +657,6 @@ span{
         border-bottom: 1.5px solid rgba(255,255,255,0.45);
         color: white;
         padding: 10px 6px;
-        border-radius: 0;
         outline: none;
         transition: border-color 0.2s;
     }
@@ -673,7 +671,6 @@ span{
         font-size: 12px;
     }
 
-    /* --- Stops heading --- */
     #form_div > h3 {
         font-size: 12px !important;
         color: rgba(255,255,255,0.85) !important;
@@ -683,17 +680,14 @@ span{
         letter-spacing: 0.5px;
     }
 
-    /* --- Stops Grid --- */
-    #stops_div {
+    /* Stops grid - 2 columns */
+    #form_div #stops_div {
         width: 100%;
         height: auto;
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 10px 16px;
         padding: 0;
-        flex-wrap: unset;
-        align-items: unset;
-        justify-content: unset;
     }
 
     .stops_in {
@@ -717,7 +711,6 @@ span{
         font-size: 11px;
     }
 
-    /* --- Buttons group --- */
     #btn_add {
         width: 100%;
         height: 46px;
@@ -731,10 +724,6 @@ span{
         letter-spacing: 0.4px;
         margin-top: 8px;
         transition: all 0.2s ease;
-    }
-
-    #btn_add:hover {
-        background: rgba(255,255,255,0.3);
     }
 
     #btn_add:active {
@@ -751,17 +740,121 @@ span{
         border: 1px solid rgba(255,255,255,0.35);
         border-radius: 10px;
         cursor: pointer;
-        letter-spacing: 0.3px;
         transition: all 0.2s ease;
     }
 
-    #home_btn:hover {
-        background: rgba(255,255,255,0.12);
-        color: white;
-        border-color: rgba(255,255,255,0.6);
+    #home_btn:active {
+        transform: scale(0.97);
     }
 
-    #home_btn:active {
+    /* ================================================
+       PAGE 3 — ALL ROUTES TABLE
+       ================================================ */
+
+    #main_route_con {
+        width: 100vw;
+        min-height: 100vh;
+        height: auto;
+        background-image: linear-gradient(160deg, #3F2B96 0%, #7b5ea7 55%, #A8C0FF 100%);
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 28px 16px 40px;
+        gap: 20px;
+    }
+
+    #main_route_con > h2 {
+        font-size: 14px !important;
+        color: white !important;
+        font-weight: 700;
+        text-align: center;
+        letter-spacing: 0.6px;
+        margin: 0;
+        line-height: 1.4;
+    }
+
+    /* Horizontally scrollable table */
+    #main_route_con table {
+        width: 100%;
+        font-size: 11px !important;
+        border-collapse: collapse;
+        color: white !important;
+        border: 1.5px solid rgba(255,255,255,0.4) !important;
+        display: block;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        white-space: nowrap;
+        border-radius: 10px;
+    }
+
+    #main_route_con table thead {
+        background: rgba(255,255,255,0.2);
+    }
+
+    #main_route_con table th {
+        font-size: 10px;
+        font-weight: 700;
+        padding: 10px 14px;
+        text-align: center;
+        letter-spacing: 0.5px;
+        border-bottom: 1.5px solid rgba(255,255,255,0.3);
+        white-space: nowrap;
+        color: white;
+    }
+
+    #main_route_con table td {
+        font-size: 11px;
+        padding: 10px 14px;
+        text-align: center;
+        border-bottom: 1px solid rgba(255,255,255,0.12);
+        white-space: nowrap;
+        color: white;
+    }
+
+    #main_route_con table tbody tr:last-child td {
+        border-bottom: none;
+    }
+
+    #main_route_con table tbody tr:nth-child(even) {
+        background: rgba(255,255,255,0.07);
+    }
+
+    /* Note texts */
+    #main_route_con > h3 {
+        font-size: 11px !important;
+        color: rgba(255,255,255,0.7) !important;
+        font-weight: 400 !important;
+        text-align: center;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0 4px;
+    }
+
+    #main_route_con > span {
+        font-size: 11px !important;
+        color: rgba(255,255,255,0.55) !important;
+        text-align: center;
+        font-style: italic;
+        margin: 0;
+    }
+
+    /* Both buttons equal */
+    #btn_r {
+        width: 100%;
+        height: 46px;
+        font-size: 13px !important;
+        font-weight: 600;
+        padding: 0 20px;
+        border: 1.5px solid rgba(255,255,255,0.5);
+        border-radius: 10px;
+        background: rgba(255,255,255,0.15);
+        color: white;
+        cursor: pointer;
+        letter-spacing: 0.4px;
+        transition: all 0.2s ease;
+    }
+
+    #btn_r:active {
         transform: scale(0.97);
     }
 }
@@ -772,62 +865,33 @@ span{
 
 @media screen and (max-width: 480px) {
 
-    #normal_headings h1 {
-        font-size: 18px;
-    }
+    /* Home */
+    #normal_headings h1 { font-size: 18px; }
+    #again_h1 { font-size: 14px !important; }
+    #inputs_con h3 { font-size: 11px; }
+    .inputs { font-size: 13px; padding: 10px 12px; }
+    #btn { height: 44px; font-size: 14px; }
+    #details_con h2 { font-size: 13px; }
+    .details { font-size: 13px; }
+    #each_stop span.details { font-size: 11px; padding: 4px 10px; }
+    #error h1 { font-size: 16px; }
 
-    #again_h1 {
-        font-size: 14px !important;
-    }
+    /* Add Routes */
+    #main_routes_con > h2 { font-size: 12px !important; }
+    .inputs_add { font-size: 12px; }
+    #form_div > h3 { font-size: 11px !important; }
+    .stops_in { font-size: 11px; }
+    #btn_add { height: 44px; font-size: 13px; }
+    #home_btn { height: 40px; font-size: 12px; }
 
-    #inputs_con h3 {
-        font-size: 11px;
-    }
-
-    .inputs {
-        font-size: 13px;
-        padding: 10px 12px;
-    }
-
-    #btn {
-        height: 44px;
-        font-size: 14px;
-    }
-
-    #details_con h2 {
-        font-size: 13px;
-    }
-
-    .details {
-        font-size: 13px;
-    }
-
-    #each_stop span.details {
-        font-size: 11px;
-        padding: 4px 10px;
-    }
-
-    #main_routes_con > h2 {
-        font-size: 14px !important;
-    }
-
-    .inputs_add {
-        font-size: 12px;
-    }
-
-    .stops_in {
-        font-size: 11px;
-    }
-
-    #btn_add {
-        height: 44px;
-        font-size: 13px;
-    }
-
-    #home_btn {
-        height: 40px;
-        font-size: 12px;
-    }
+    /* Routes Table */
+    #main_route_con { padding: 22px 12px 36px; gap: 16px; }
+    #main_route_con > h2 { font-size: 12px !important; }
+    #main_route_con table th { font-size: 9px; padding: 8px 10px; }
+    #main_route_con table td { font-size: 10px; padding: 8px 10px; }
+    #main_route_con > h3 { font-size: 10px !important; }
+    #main_route_con > span { font-size: 10px !important; }
+    #btn_r { height: 44px; font-size: 12px !important; }
 }
 
 /* ================================================
@@ -841,7 +905,7 @@ span{
         padding-top: 20px;
     }
 
-    #stops_div {
+    #form_div #stops_div {
         grid-template-columns: 1fr 1fr;
     }
 }
